@@ -73,7 +73,7 @@
 
             bindings = <
 &kp TAB     &kp Q  &kp W      &kp E    &kp R  &kp T          &kp Y  &kp U  &kp I      &kp O    &kp P         &kp LEFT_ALT
-&kp LCTRL   &kp A  &kp S      &kp D    &kp F  &kp G          &kp H  &kp J  &kp K      &kp L    &kp SEMI      &kp CAPS
+&kp LCTRL   &kp A  &kp S      &kp D    &kp F  &kp G          &kp H  &kp J  &kp K      &kp L    &kp SEMI      &kp ESC
 &kp LGUI    &kp Z  &kp X      &kp C    &kp V  &kp B          &kp N  &kp M  &kp COMMA  &kp DOT  &shift_slash  &kp RIGHT_ALT
 &kp LSHIFT  &mo 2  &kp SPACE  &kp RET  &mo 3  &shift_delete
             >;
@@ -102,10 +102,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-
 &trans  &kp F1   &kp F2        &kp F3     &kp F4     &kp F5     &kp F6    &kp F7    &kp F8  &kp F9     &kp F10  &trans
 &trans  &kp F11  &sz_ligature  &a_umlaut  &o_umlaut  &u_umlaut  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp F12  &trans
-&trans  &kp N1   &kp N2        &kp N3     &kp N4     &kp N5     &kp N6    &kp N7    &kp N8  &kp N9     &kp N0   &kp ESC
+&trans  &kp N1   &kp N2        &kp N3     &kp N4     &kp N5     &kp N6    &kp N7    &kp N8  &kp N9     &kp N0   &kp CAPSLOCK
 &trans  &trans   &trans        &trans     &trans     &trans
             >;
         };
