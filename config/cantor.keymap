@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos { compatible = "zmk,combos"; };
 
     behaviors {
         shift_delete: shift_delete {
