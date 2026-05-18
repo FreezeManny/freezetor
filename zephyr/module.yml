@@ -1,0 +1,4 @@
+name: freezetor-config
+build:
+  settings:
+    board_root: .
