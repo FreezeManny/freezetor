@@ -1,5 +1,5 @@
-# My Custom Cantor Pro LP Wireless Keyboard
-
+# Freezetor
+## Custom Wireless Cantor Pro LP
 ![Keyboard Image](images/keyboard.jpg)
 
 This repository contains all the files and configuration for my personal build of the **Cantor Pro LP**, a 40% low-profile, hotswap, split ergonomic keyboard. This build is fully wireless, using Nice!Nano controllers running the ZMK firmware.
