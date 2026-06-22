@@ -1,0 +1,30 @@
+if SHIELD_FREEZETOR_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Freezetor"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_FREEZETOR_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "Freezetor Dongle"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+# The dongle is the central and connects to both keyboard halves.
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+endif
+
+if SHIELD_FREEZETOR_LEFT || SHIELD_FREEZETOR_RIGHT || SHIELD_FREEZETOR_DONGLE
+
+config ZMK_SPLIT
+    default y
+
+endif

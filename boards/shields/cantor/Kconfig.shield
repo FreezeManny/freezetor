@@ -1,6 +1,0 @@
-config SHIELD_CANTOR_LEFT
-    def_bool $(shields_list_contains,cantor_left)
-
-config SHIELD_CANTOR_RIGHT
-    def_bool $(shields_list_contains,cantor_right)
-

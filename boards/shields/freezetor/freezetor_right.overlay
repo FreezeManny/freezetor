@@ -1,4 +1,4 @@
-#include "cantor.dtsi"
+#include "freezetor.dtsi"
 
 // Override the matrix transform to swap Enter and Slash positions
 // due to pin differences between left and right PCBs
