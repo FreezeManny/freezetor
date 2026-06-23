@@ -19,16 +19,30 @@
 #
 ---
 include:
+  # ─── Bluetooth-only build (no dongle) ─────────────────────────────────
+  # The left half is the split central and pairs directly with the host over
+  # Bluetooth; the right half is its peripheral. This is the default,
+  # dongle-less setup — flash freezetor_left + freezetor_right.
   - board: nice_nano_v2
     shield: freezetor_left
+    artifact-name: freezetor_left
   - board: nice_nano_v2
     shield: freezetor_right
-  # Dongle build: the dongle is the central, both halves are peripherals.
-  # freezetor_right above is already a peripheral and is reused as-is; only the
-  # left half needs a peripheral variant (its default role is central).
+    artifact-name: freezetor_right
+
+  # ─── Dongle + keyboard build ──────────────────────────────────────────
+  # The dongle is the split central and pairs with the host; both halves are
+  # peripherals. Flash freezetor_dongle + freezetor_left_dongle_peripheral +
+  # freezetor_right_dongle_peripheral. The left half must be rebuilt as a
+  # peripheral (its default role is central); the right half is already a
+  # peripheral but is rebuilt here so each mode has a self-contained set.
   - board: nice_nano_v2
     shield: freezetor_dongle
+    artifact-name: freezetor_dongle
   - board: nice_nano_v2
     shield: freezetor_left
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     artifact-name: freezetor_left_dongle_peripheral
+  - board: nice_nano_v2
+    shield: freezetor_right
+    artifact-name: freezetor_right_dongle_peripheral

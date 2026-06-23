@@ -41,6 +41,17 @@ This keyboard runs on the [ZMK Firmware](https://zmk.dev/docs), which is designe
 
 * **ZMK Config:** The main configuration files are located in the `/config/` directory.
 
+### Build Options
+
+The GitHub Actions build (`build.yaml`) produces firmware for two ways of running the keyboard. Pick **one** mode and flash the matching set of `.uf2` files:
+
+| Mode | What it is | Flash these |
+| :--- | :--- | :--- |
+| **Bluetooth-only** | No dongle. The left half is the split central and pairs directly with the host; the right half is its peripheral. | `freezetor_left` + `freezetor_right` |
+| **Dongle + keyboard** | A third Nice!Nano acts as a USB/BLE dongle and is the split central; both halves are peripherals. The dongle stays plugged into the host. | `freezetor_dongle` + `freezetor_left_dongle_peripheral` + `freezetor_right_dongle_peripheral` |
+
+A half cannot be central and peripheral at the same time, so the left (and right) firmware differs between the two modes — always flash the artifacts from a single column.
+
 ### Configure, Build & Flash
 * Configuration: Done using awesome [Keymap Editor](https://nickcoutsos.github.io/keymap-editor/)
 * Build: standard Github Actions
