@@ -46,3 +46,13 @@ include:
   - board: nice_nano_v2
     shield: freezetor_right
     artifact-name: freezetor_right_dongle_peripheral
+
+  # ─── Settings reset ───────────────────────────────────────────────────
+  # Flash this to a device to wipe its stored BLE bonds. Needed when
+  # switching between the dongle-less and dongle setups so stale split
+  # pairings don't block the halves from connecting to the new central.
+  # Flash it to each device (dongle + both halves), then reflash the real
+  # firmware and power them on together to re-pair.
+  - board: nice_nano_v2
+    shield: settings_reset
+    artifact-name: freezetor_settings_reset
